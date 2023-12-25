@@ -1,0 +1,87 @@
+<main class="gmap-container">
+  <div id="map"></div>
+
+  <div id="panel">
+    <section class="right-panel">
+      <section class="zone-edit-add-container">
+        <!-- <div id="color-palette"></div> -->
+
+        <!-- add zone -->
+        <div class="form-section">
+          <h4>Zone Add Form</h4>
+          <label>Zone Name :</label>
+          <input [(ngModel)]="name" />
+          <label>Zone Delivery Charge :</label>
+          <input type="number" [(ngModel)]="delCharge" />
+          <label for="">Color of zone: </label>
+          <div id="color-palette"></div>
+          <button type="button" (click)="addZone(); $event.stopPropagation()">
+            Add Zone
+          </button>
+        </div>
+        <!-- shape action details -->
+        <section class="shape-action-box">
+          <h4>Shape Action</h4>
+          <button id="delete-button">Delete Selected Shape</button>
+          <button (click)="showAllShapes()">Show All Shapes</button>
+          <button (click)="hideAllShapes()">Hide All Shapes</button>
+        </section>
+
+        <!-- Zone deatils -->
+        <section>
+          <h4>Zone Details ::</h4>
+          <span *ngFor="let item of zoneObjectArray"
+            ><p>
+              {{ item.name }}:
+              <span *ngIf="item.shape.polygon">(polygon)</span>
+              <span *ngIf="item.shape.circle">(circle)</span>
+            </p>
+            <p>Delivery Cost : {{ item.deliveryCharge }}</p>
+            <button (click)="editEnable(item.name)">Edit</button>
+            <button (click)="saveShape(item.name)">Save</button>
+          </span>
+        </section>
+      </section>
+
+      <!-- enter address check -->
+      <section class="delivery-cost-check-container">
+        <!-- INFO : Disabled coz Below doesnt work because of gmap billing-->
+        <div *ngIf="false">
+          <p>Check Delivery Charge of Address</p>
+          <p>Address :</p>
+          <textarea
+            name="text"
+            rows="14"
+            cols="10"
+            wrap="soft"
+            style="height: 65px; width: 210px"
+            [(ngModel)]="address"
+          >
+          </textarea>
+          <button (click)="checkDelivery(true)">Check</button>
+          <p>Your Delivery Charge is : {{ checkDeliveryCharge }}</p>
+        </div>
+        <hr />
+        <!-- check delivery charge -->
+        <div class="form-section">
+          <h3>Check Delivery Charge of Location</h3>
+          <label>Zone latitude :</label>
+          <input type="number" [(ngModel)]="clickLat" />
+          <label>Zone longitude :</label>
+          <input type="number" [(ngModel)]="clickLng" />
+          <button (click)="checkDelivery(false); $event.stopPropagation()">
+            Check
+          </button>
+          <p>Your Delivery Charge is : {{ checkDeliveryCharge }}</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- <hr />
+    <div>
+      display - <br />
+      clicked lat : {{ clickLat }}<br />
+      clicked lng : {{ clickLng }}
+    </div> -->
+  </div>
+</main>

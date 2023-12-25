@@ -1,0 +1,85 @@
+.gmap-container {
+  display: flex;
+}
+
+.right-panel {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  section {
+    flex: 1;
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  button {
+    border: none;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.5);
+}
+
+.shape-action-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+hr {
+  display: none;
+}
+
+#map {
+  padding: 0;
+  margin: 0;
+  width: 960px;
+  height: 700px;
+}
+
+#panel {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  padding: 10px;
+}
+
+#color-palette {
+  display: flex;
+  align-items: center;
+  .color_button {
+    width: 25px;
+    height: 20px;
+    font-size: 0;
+    margin: 2px;
+    float: left;
+    cursor: pointer;
+  }
+}
+
+#delete-button {
+  margin-top: 5px;
+}
