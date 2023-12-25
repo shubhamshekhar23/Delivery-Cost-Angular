@@ -8,7 +8,7 @@
 
         <!-- add zone -->
         <div class="form-section">
-          <h4>Zone Add Form</h4>
+          <h3>Zone Add Form</h3>
           <label>Zone Name :</label>
           <input [(ngModel)]="name" />
           <label>Zone Delivery Charge :</label>
@@ -22,9 +22,9 @@
         <!-- shape action details -->
         <section class="shape-action-box">
           <h4>Shape Action</h4>
-          <button id="delete-button">Delete Selected Shape</button>
           <button (click)="showAllShapes()">Show All Shapes</button>
           <button (click)="hideAllShapes()">Hide All Shapes</button>
+          <button id="delete-button">Delete Selected Shape</button>
         </section>
 
         <!-- Zone deatils -->
@@ -64,7 +64,7 @@
         <hr />
         <!-- check delivery charge -->
         <div class="form-section">
-          <h3>Check Delivery Charge of Location</h3>
+          <h3>Delivery Cost of Location</h3>
           <label>Zone latitude :</label>
           <input type="number" [(ngModel)]="clickLat" />
           <label>Zone longitude :</label>
