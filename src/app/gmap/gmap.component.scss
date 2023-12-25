@@ -37,6 +37,15 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    &:hover {
+      background-color: #6a1b9a; /* Darker purple on hover */
+      transform: scale(1.01);
+    }
+    &:disabled {
+      background-color: #bdc3c7; /* Gray background color for disabled state */
+      color: #7f8c8d; /* Darker text color for disabled state */
+      cursor: not-allowed;
+    }
   }
 }
 
