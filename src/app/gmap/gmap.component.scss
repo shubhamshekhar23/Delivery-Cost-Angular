@@ -2,6 +2,83 @@
   display: flex;
 }
 
+.zone-edit-add-container {
+  grid-area: zone-edit-add-container;
+}
+.shape-action-box {
+  grid-area: shape-action-box;
+  div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    button {
+      flex: 1;
+    }
+  }
+}
+.zone-details {
+  grid-area: zone-details;
+  h5 {
+    text-align: center;
+    height: 170px;
+    margin: 0;
+    top: 50%;
+    position: relative;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 170px;
+    overflow-y: scroll;
+    border-radius: 8px;
+    &::-webkit-scrollbar {
+      width: 12px; /* Adjust the width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #999; /* Adjust the color of the scrollbar thumb */
+    }
+    h5 {
+      text-align: center;
+    }
+    .card {
+      border-radius: 8px;
+      padding: 10px;
+      margin: 7px;
+      box-shadow: 0 23px 7px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+      max-width: 200px;
+      max-height: 125px;
+      background-color: white;
+      p {
+        margin: 8px 0;
+      }
+      button {
+        margin-top: 8px;
+      }
+      .card-footer {
+        display: flex;
+        gap: 5px;
+        button {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+.delivery-cost-check-container {
+  grid-area: delivery-cost-check-container;
+}
+
+.right-panel {
+  display: grid;
+  grid-template-areas:
+    "zone-edit-add-container delivery-cost-check-container"
+    "zone-details zone-details"
+    "shape-action-box shape-action-box";
+  gap: 10px;
+}
+
 ::ng-deep .gmnoprint[role="menubar"] {
   z-index: 10;
   position: absolute;
@@ -21,11 +98,11 @@
 }
 
 .right-panel {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
+  // display: flex;
+  // gap: 20px;
+  // justify-content: space-between;
   section {
-    flex: 1;
+    // flex: 1;
   }
   h4 {
     margin-bottom: 0;

@@ -12,3 +12,11 @@
 - Angular version `16.2.6`.
 - run `npm i`
 - run `npm run start`
+
+## Features and bugs
+
+- Delete selected shape should work
+- Include zone card selection from list of zones and then showing the same in map
+- include color info in the zone card
+- proper functionality of disabling and enabling of show all shapes and hide all shapes, delete slecyed shape, edit and save in teh card.
+-
