@@ -59,7 +59,9 @@
           >
           </textarea>
           <button (click)="checkDelivery(true)">Check</button>
-          <p>Your Delivery Charge is : {{ checkDeliveryCharge }}</p>
+          <p class="delivery-message">
+            Your Delivery Charge is : {{ checkDeliveryCharge }}
+          </p>
         </div>
         <hr />
         <!-- check delivery charge -->
@@ -72,7 +74,9 @@
           <button (click)="checkDelivery(false); $event.stopPropagation()">
             Check
           </button>
-          <p>Your Delivery Charge is : {{ checkDeliveryCharge }}</p>
+          <p class="delivery-message">
+            Delivery Charge : {{ checkDeliveryCharge }}
+          </p>
         </div>
       </section>
     </section>
